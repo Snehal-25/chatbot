@@ -1,0 +1,79 @@
+version: "2.0"
+
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+
+entities:
+- check_in_date
+- check_out_date
+- destination
+slots:
+  hotel_name:
+    type: list
+    influence_conversation: true
+
+  check_in_date:
+    type: list
+    influence_conversation: true
+
+  check_out_date:
+    type: list
+    influence_conversation: true
+  
+  destination_name:
+    type: list
+    influence_conversation: true
+
+  
+intents:
+  
+  - faq:
+      use_entities: true
+  - find_hotels:
+      use_entities: true
+
+responses:
+  
+
+  utter_faq/hotels:
+  - text: here hotels
+
+  utter_find_hotels/hotels_city_only:
+  - text: here hotelskljwjfkc
+
+  utter_find_hotels/check_indate_only:
+  - text: thois ohend
+
+  utter_find_hotels/check_outdate_only:
+  - text: thois ohendkjsjckldvjcf
+
+  utter_find_hotels/check_in_outdate_only:
+  - text: likecnkjdcn
+
+  utter_find_hotels/check_indate_city:
+  - text: iuhuwnfcjdvdf
+
+  utter_find_hotels/check_in_outdate_city:
+  - text: thois ohend iojhiuhffcue
+
+  utter_faq/ask_name:
+  - text: thois ohend iojhiuhffcue
+
+  utter_faq/ask_weather:
+  - text: thois ohend iojhiuhffcue
+
+  utter_faq/how_can_you_help:
+  - text: thois ohend iojhiuhffcue
+
+  utter_find_hotels/check_outdate_city:
+  - text: thois ohend iojhiuhffcue
+  
+
+actions:
+- action_find_hotels
+forms: {}
+e2e_actions: []

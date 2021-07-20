@@ -1,0 +1,107 @@
+version: "2.0"
+
+nlu:
+
+- intent: faq/hotels
+  examples: |
+    - I need some hotels class info
+    - I want some hotels data
+    - Give me some hotle information please?
+    - Need to search for hotelss
+    - I want to search for some hotelss
+    - Looking for hotels
+    - I need some hotels information
+    - hotelss
+    - I need to see some hotels
+    - Need hotelss bro
+    - hotelss please
+    - How to find the best hotels near me?
+    - Are you able to locate hotels in Berlin for me?
+
+
+- intent: find_hotels/hotels_city_only
+  examples: |
+    - Hotels in [Berlin]{"entity":"destination"}
+    - book hotel in [paris]{"entity":"destination"} for me
+    - can you find hotless in [germany]{"entity":"destination"}
+    - hotels near [time square]{"entity":"destination"}.
+    - [France]{"entity":"destination"}'s hotels.
+    - Hotels in [France]{"entity":"destination"} are many.
+    - Hotel reservations in [Delhi]{"entity":"destination"}
+    - Hotels in [Delhi]{"entity":"destination"} are available for reservation.
+    - Hotels in [Delhi]{"entity":"destination"} can be booked online.
+    - What kind of hotels can you find in [Rajasthan]{"entity":"destination"}?
+    - In [Rajasthan]{"entity":"destination"}, what kind of hotels are there?
+    - What hotels can you find in [Rajasthan]{"entity":"destination"}?
+    - Is it possible for you to locate hotels in [Berlin]{"entity":"destination"} for me?
+    - Are you able to locate hotels in [Berlin]{"entity":"destination"} for me?
+    - Can you locate hotels in [Berlin]{"entity":"destination"} for me?
+
+
+- intent: find_hotels/check_indate_only
+  examples: |
+    - book me a hotel for [2021-11-25]{"entity":"check_in_date"}
+    - hotels available on [2021-08-18]{"entity":"check_in_date"}
+    - i want to check in on [2021-07-30]{"entity":"check_in_date"}
+
+- intent: find_hotels/check_outdate_only
+  examples: |
+    - book me a hotel till [2021-11-25]{"entity":"check_out_date"}
+    - check-out date  [2021-08-18]{"entity":"check_out_date"}
+    - i want to check out on [2021-07-30]{"entity":"check_out_date"}
+
+- intent: find_hotels/check_in_outdate_only
+  examples: |
+    - find hotels for [2021-08-29]{"entity":"check_in_date"} till [2021-09-03]{"entity":"check_out_date"}
+    - check in date [2021-08-29]{"entity":"check_in_date"} and check out on [2021-09-03]{"entity":"check_out_date"}
+    - I'd like to reserve a hotel room from [August 18]{"entity":"check_in_date"} to [August 29 2021]{"entity":"check_out_date"}.
+    - From [2021-08-18]{"entity":"check_in_date"} to [2021-08-29]{"entity":"check_out_date"}, I'd like to book a hotel room.
+    - I'd like to book a hotel for the dates [2021-08-18]{"entity":"check_in_date"} through [2021-08-29]{"entity":"check_out_date"}.
+    - I'd like to reserve a hotel room from [August 18]{"entity":"check_in_date"} to [August 29 2021]{"entity":"check_out_date"}.
+    - From [2021-08-18]{"entity":"check_in_date"} to [2021-08-29]{"entity":"check_out_date"}, I'd like to book a hotel room.
+
+
+- intent: find_hotels/check_indate_city
+  examples: |
+    - i want a hotel in [germany]{"entity":"destination"}  on [2021-09-03]{"entity":"check_in_date"}
+    - hotels in [france]{"entity":"destination"}  for [2021-09-03]{"entity":"check_in_date"}
+    - find me near by hotels to [delhi airport]{"entity":"destination"}  for [2021-12-30]{"entity":"check_in_date"}
+    - hotels in [new york]{"entity":"destination"}  for [January 1st]{"entity":"check_in_date"}
+
+- intent: find_hotels/check_outdate_city
+  examples: |
+    - i will leave [berlin]{"entity":"destination"} on [22nd july 2021]("check_out_date") get me a hotel
+    - my check out date is [14th nov 2021]("check_out_date") from [new york]{"entity":"destination"}.
+    - i want to check out by [dec 20 2021]("check_out_date") for my flight from [delhi airport]{"entity":"destination"}
+
+- intent: find_hotels/check_in_outdate_city
+  examples: |
+    - i am looking for hotel in [gujrat]{"entity":"destination"}  from [2021-08-29]{"entity":"check_in_date"} till [2021-09-03]{"entity":"check_out_date"}
+    - what hotels ate available from [2021-08-29]{"entity":"check_in_date"} to [2021-09-03]{"entity":"check_out_date"} in [paris]{"entity":"destination"} 
+    - find me a hotel near [seoul olympic stadium]{"entity":"destination"} start from [2021-11-29]{"entity":"check_in_date"} till [2021-12-03]{"entity":"check_out_date"}
+    - hotels in [melbourne]{"entity":"destination"}, [2021-10-19]{"entity":"check_out_date"}, [2021-10-15]{"entity":"check_in_date"}
+
+- intent: faq/ask_name
+  examples: |
+    - What is your name?
+    - May I know your name?
+    - What do people call you?
+    - Do you have a name for yourself?
+
+- intent: faq/ask_weather
+  examples: |
+    - What's the weather like today?
+    - Does it look sunny outside today?
+    - Oh, do you mind checking the weather for me please?
+    - I like sunny days in Berlin.
+
+
+- intent: faq/how_can_you_help
+  examples: |
+    - how can i get benefitted by booking tickets from here
+    - what is benefit for me
+    - are there any discounts for me 
+    - will Travel-bot.com give me some additional discounts
+    - how's travel-bot helping others so that it can help me
+
+
